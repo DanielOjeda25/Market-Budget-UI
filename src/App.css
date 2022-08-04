@@ -13,3 +13,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.logo{
+  width: 6rem;
+  height: 5rem;
+}

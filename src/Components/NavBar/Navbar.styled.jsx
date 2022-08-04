@@ -42,11 +42,11 @@ const SearchContainer = styled.div`
 /**Center Elements */
 const Center = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
-const Logo = styled.h1`
-  font-weight: bold;
-  text-align: center;
-`
+
 
 /**Right Elements */
 const Right = styled.div`
@@ -72,4 +72,4 @@ const AnnouncementDiv = styled.div`
   padding: 0.625rem 1.25rem;
 `
 
-export { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, Logo, MenuItem , AnnouncementDiv}
+export { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, MenuItem , AnnouncementDiv}
