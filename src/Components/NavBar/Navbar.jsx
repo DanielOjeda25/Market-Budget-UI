@@ -1,9 +1,12 @@
+import React from 'react'
+import logo from '../../assets/MarketBudget.png'
+import { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, MenuItem } from './Navbar.styled'
+
 import { Search } from '@mui/icons-material'
 import { Badge } from '@mui/material'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-import React from 'react'
-import { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, Logo,MenuItem } from './Navbar.styled'
+
 const Navbar = () => {
   return (
     <ContainerNav>
@@ -15,7 +18,9 @@ const Navbar = () => {
             <Search style={{color: 'gray', fontSize: 16}}/>
           </SearchContainer>
         </Left>
-        <Center><Logo>Market Budget</Logo></Center>
+        <Center>
+          <img src={logo} alt='market Budget'className='logo'/>
+        </Center>
         <Right>
           <MenuItem>Register</MenuItem>
           <MenuItem>Sign In</MenuItem>
