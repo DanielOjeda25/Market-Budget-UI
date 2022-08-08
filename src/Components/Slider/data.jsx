@@ -1,7 +1,17 @@
 import img1 from '../../assets/1.jpg'
 import img2 from '../../assets/2.jpg'
 import img3 from '../../assets/3.jpg'
-
+import jacket from '../../assets/jacket.png'
+import mermelada from '../../assets/mermelada.png'
+import Dete from '../../assets/Dete.png'
+import Jabon from '../../assets/Jabon.png'
+import oil from '../../assets/oil.png'
+import tshirt from '../../assets/Tshirt.png'
+import head from '../../assets/head.png'
+import shoes from '../../assets/shoes.png'
+import Products from '../../assets/Products.jpg'
+import clotes from '../../assets/clotes.jpg'
+import electronic from '../../assets/electronic.jpg'
 export const sliderItems = [
   {
     id: 1,
@@ -29,52 +39,52 @@ export const sliderItems = [
 export const categories = [
   {
     id: 1,
-    img: 'https://i.ibb.co/cvpntL1/hats.png',
-    title: 'HATS',
+    img: `${electronic}`,
+    title: 'ELECTRONICS',
   },
   {
     id: 2,
-    img: 'https://i.ibb.co/px2tCc3/jackets.png',
-    title: 'JACKETS',
+    img: `${Products}`,
+    title: 'PRODUCTS',
   },
   {
     id: 3,
-    img: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-    title: 'SNEAKERS',
+    img: `${clotes}`,
+    title: 'CLOTHES',
   },
 ]
 
 export const popularProducts = [
   {
     id: 1,
-    img: 'https://i.ibb.co/XzcwL5s/1.png',
+    img: `${jacket}`,
   },
   {
     id: 2,
-    img: 'https://i.ibb.co/dJbG1cT/2.png',
+    img: `${mermelada}`,
   },
   {
     id: 3,
-    img: 'https://i.ibb.co/7CQVJNm/3.png',
+    img: `${Dete}`,
   },
   {
     id: 4,
-    img: 'https://i.ibb.co/px2tCc3/jackets.png',
+    img: `${Jabon}`,
   },
   {
     id: 5,
-    img: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+    img: `${oil}`,
   },
   {
     id: 6,
-    img: 'https://i.ibb.co/cvpntL1/hats.png',
+    img: `${tshirt}`,
   },
   {
     id: 7,
-    img: 'https://i.ibb.co/XzcwL5s/1.png',
+    img: `${head}`,
   },
   {
     id: 8,
-    img: 'https://i.ibb.co/dJbG1cT/2.png',
+    img: `${shoes}`,
   },
 ]
