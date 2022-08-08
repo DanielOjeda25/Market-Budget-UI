@@ -19,7 +19,7 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <img src={logo} alt='market Budget'className='logo'/>
+         Market Budget
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>
