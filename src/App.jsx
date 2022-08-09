@@ -1,9 +1,13 @@
 import './App.css'
 import Home from './Pages/Home'
+import ProductList from './Pages/ProductList'
+import ProductPage from './Pages/ProductPage'
 function App() {
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      {/* <ProductList /> */}
+      <ProductPage />
     </>
   )
 }
