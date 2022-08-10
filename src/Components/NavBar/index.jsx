@@ -1,6 +1,5 @@
 import React from 'react'
-import logo from '../../assets/MarketBudget.png'
-import { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, MenuItem } from './Navbar.styled'
+import { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, MenuItem, Logo } from './Navbar.styled'
 
 import { Search } from '@mui/icons-material'
 import { Badge } from '@mui/material'
@@ -14,12 +13,12 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder='Search'/>
             <Search style={{color: 'gray', fontSize: 16}}/>
           </SearchContainer>
         </Left>
         <Center>
-         Market Budget
+         <Logo>Market Budget</Logo>
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>

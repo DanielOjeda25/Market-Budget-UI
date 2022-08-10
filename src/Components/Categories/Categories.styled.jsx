@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Variables } from '../../Global.styled'
+import { mobile } from '../../responsive-media'
 
 /**
  * !Este container es para el CategoryItem.jsx
@@ -14,6 +15,7 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  ${mobile({ height: '20vh' })}
 `
 const Info = styled.div`
   position: absolute;
@@ -52,6 +54,7 @@ const ContainerCategories = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
+  ${mobile({padding: '0px', flexDirection: 'column'})}
 `
 
 export { ContainerItem, ContainerCategories, Image, Info, Title, Button }
