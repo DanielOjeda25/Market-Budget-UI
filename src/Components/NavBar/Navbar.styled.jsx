@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 import { Variables } from '../../Global.styled'
-
+import { mobile } from '././../../responsive-media'
 /**
  * !Container general
  */
 const ContainerNav = styled.div`
   height: 3.75rem;
   font-family: ${Variables.Fontfamily};
+  ${mobile({ height: '50px' })}
 `
 /**
  * !Wrapper
@@ -16,6 +17,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${mobile({ padding: '10px 0px' })}
 `
 /**
  * *Sepators
@@ -29,12 +31,14 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 0.875rem;
   cursor: pointer;
+  ${mobile({ display: 'none' })}
 `
 const Input = styled.input`
   border: none;
+  ${mobile({ width: '50px' })}
 `
 const SearchContainer = styled.div`
-  border: .0313rem solid ${Variables.GrayColor};
+  border: 0.0313rem solid ${Variables.GrayColor};
   display: flex;
   align-items: center;
   margin-left: 1.5625rem;
@@ -54,11 +58,13 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ flex: 2, justifyContent: 'center' })}
 `
 const MenuItem = styled.div`
-  font-size: .875rem;
+  font-size: 0.875rem;
   cursor: pointer;
   margin-left: 1.5625rem;
+  ${mobile({ fontSize: '10px', marginLeft: '10px' })}
 `
 const AnnouncementDiv = styled.div`
   font-size: 1rem;
@@ -71,5 +77,22 @@ const AnnouncementDiv = styled.div`
   font-weight: 700;
   padding: 0.625rem 1.25rem;
 `
+const Logo = styled.h1`
+  font-weight: 700;
+  font-size: 1rem;
+  ${mobile({ fontSize: '20px' })}
+`
 
-export { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, MenuItem , AnnouncementDiv}
+export {
+  ContainerNav,
+  Wrapper,
+  Left,
+  Right,
+  Center,
+  Language,
+  SearchContainer,
+  Input,
+  MenuItem,
+  AnnouncementDiv,
+  Logo
+}

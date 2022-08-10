@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import { Variables } from '../../Global.styled'
+import { mobile } from '../../responsive-media'
 const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobile({ display: 'none' })}
 `
 
 const Arrow = styled.div`
@@ -28,7 +30,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transform: translateX(${props => props.slideIndex * - 100}vw);
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
   transition: all 1.5s ease;
 `
 

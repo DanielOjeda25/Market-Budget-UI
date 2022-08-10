@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import { Variables } from '../../Global.styled'
+import { mobile } from '../../responsive-media'
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: 'column' })}
 `
 const Left = styled.div`
   flex: 1;
@@ -11,10 +13,13 @@ const Left = styled.div`
 `
 const Right = styled.div`
   flex: 1;
+  padding: 20px;
+  ${mobile({ backgroundColor: '#eee' })}
 `
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: 'none' })}
 `
 
 const Logo = styled.img`
