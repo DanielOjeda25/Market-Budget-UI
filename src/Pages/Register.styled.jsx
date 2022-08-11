@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { mobile } from '../responsive-media'
-
+import { devices } from '../responsive-media'
 /**
  * !Elementos del Login
  */
@@ -30,13 +29,17 @@ const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
   background-color: white;
-  ${mobile({ width: '75%' })}
+  @media ${devices.mobileS} {
+    width: 75%;
+  }
 `
 const WrapperLogin = styled.div`
   width: 25%;
   padding: 20px;
   background-color: white;
-  ${mobile({ width: '75%' })}
+  @media ${devices.mobileS} {
+    width: 75%;
+  }
 `
 const Title = styled.h1`
   font-size: 24px;
@@ -93,5 +96,5 @@ export {
   FormLogin,
   WrapperLogin,
   Link,
-  InputLogin
+  InputLogin,
 }
