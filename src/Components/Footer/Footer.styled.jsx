@@ -8,6 +8,10 @@ const Container = styled.div`
   @media ${devices.mobileS}{
     flex-direction: column;
   }
+  @media ${devices.laptop}{
+    display: flex;
+    flex-direction: row;
+  }
 `
 const Left = styled.div`
   flex: 1;
@@ -24,6 +28,11 @@ const Center = styled.div`
   padding: 1.25rem;
   @media ${devices.mobileS}{
     display: none;
+  }
+  @media ${devices.laptop}{
+    display: flex;
+    padding: 1.25rem;
+    flex-direction: column;
   }
 `
 
@@ -49,6 +58,9 @@ const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   font-size: 1.2rem;  
+  @media ${devices.laptop}{
+    flex-direction: column;
+  }
 `
 const ListItem = styled.li`
   font-family: ${Variables.Fontfamily};
@@ -62,6 +74,7 @@ const ListItem = styled.li`
     color: ${Variables.lightRedColor};
     cursor: pointer;
   }
+  
 `
 const Description = styled.div`
   margin: 1.25rem 0rem;

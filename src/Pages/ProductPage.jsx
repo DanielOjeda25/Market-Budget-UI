@@ -37,9 +37,9 @@ const ProductPage = () => {
           <Image src={img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Denim Jumpsuit</Title>
-          <Desc>Lorem</Desc>
-          <Price> $20</Price>
+          <Title>Laptop</Title>
+          <Desc>Laptop for be a Programmer</Desc>
+          <Price> $1200</Price>
 
           <FilterContainer>
             <Filter>

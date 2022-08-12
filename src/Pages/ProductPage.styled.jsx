@@ -2,13 +2,19 @@ import styled from 'styled-components'
 import { Variables } from '../Global.styled'
 import { devices } from '../responsive-media'
 
-const Container = styled.div``
+const Container = styled.div`
+  font-family: ${Variables.Fontfamily};
+`
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
   @media ${devices.mobileS}{
     padding: 10px;
     flex-direction: column;
+  }
+  @media ${devices.laptop}{
+    padding: 50px;
+    flex-direction: row;
   }
 `
 const ImgContainer = styled.div`
@@ -20,6 +26,9 @@ const InfoContainer = styled.div`
   @media ${devices.mobileS}{
     padding: 10px;
   }
+  @media ${devices.laptop}{
+    padding: 0px 50px;
+  }
 `
 const Image = styled.img`
   width: 100%;
@@ -27,6 +36,9 @@ const Image = styled.img`
   object-fit: cover;
   @media ${devices.mobileS}{
     height: 40vh;
+  }
+  @media ${devices.laptop}{
+    height: 90vh;
   }
 `
 const Title = styled.h1`
@@ -46,6 +58,9 @@ const FilterContainer = styled.div`
   margin: 30px 0px;
   @media ${devices.mobileS}{
     width: 100%;
+  }
+  @media ${devices.laptop}{
+    width: 50%;
   }
 `
 const Filter = styled.div`
@@ -79,6 +94,9 @@ const AddContainer = styled.div`
   @media ${devices.mobileS}{
     width: 100%;
   }
+  @media ${devices.laptop}{
+    width: 50%;
+  }
 `
 const AmountContainer = styled.div`
   display: flex;
@@ -101,9 +119,10 @@ const Button = styled.button`
   background-color: white;
   cursor: pointer;
   font-weight: 500px;
-
+  border-radius: 10px;
+  font-weight: 500;
   &:hover {
-    background-color: gray;
+    background-color: ${Variables.greenColor};
   }
 `
 

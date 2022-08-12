@@ -5,11 +5,13 @@ import ProductPage from './Pages/ProductPage'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Cart from './Pages/Cart'
+import PrincipalPage from './Pages/PrincipalPage'
 
 function App() {
   return (
     <>
-      <Home />
+    <PrincipalPage />
+     {/*  <Home /> */}
       {/*   <ProductList />  */}
       {/*  <ProductPage /> */}
       {/*   <Register /> */}

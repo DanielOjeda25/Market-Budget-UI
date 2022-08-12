@@ -4,7 +4,6 @@ import {
   Title,
   Form,
   Input,
-  Agreement,
   Button,
 } from './Register.styled'
 
@@ -20,7 +19,6 @@ const Register = () => {
           <Input placeholder='Email' />
           <Input placeholder='Password' />
           <Input placeholder='Confirm Password' />
-          <Agreement>LOREM TEXTO PARA RELLENAR QUE FUE ESA as dsadasdasdass?</Agreement>
           <Button>Create</Button>
         </Form>
       </Wrapper>

@@ -7,15 +7,17 @@ import { devices } from '../../responsive-media'
 const ContainerNav = styled.div`
   height: 3.75rem;
   font-family: ${Variables.Fontfamily};
-  @media ${devices.mobileS} {
-    height: 3rem;
-  }
   @media ${devices.mobileM} {
     height: 3.5rem;
   }
   @media ${devices.tablet}{
     height: 3rem;
   }
+  @media screen and (max-width: 320px) {
+    height: 3rem;
+  }
+  
+  
 `
 /**
  * !Wrapper
