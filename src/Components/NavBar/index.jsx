@@ -10,11 +10,11 @@ import {
   MenuItem,
   Logo,
 } from './Navbar.styled'
-
+import './styles.css'
+import { Link } from 'react-router-dom'
 import { Search } from '@mui/icons-material'
 import { Badge } from '@mui/material'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
-import StorefrontIcon from '@mui/icons-material/Storefront'
 
 const Navbar = () => {
   return (
@@ -29,18 +29,16 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>
-            Market Budget
-          </Logo>
+          <Logo><Link to='/' style={{textDecoration: 'none'}}>Market Budget</Link></Logo>
         </Center>
         <Right>
-          <MenuItem href='/'>Register</MenuItem>
-          <MenuItem href='/'>Sign In</MenuItem>
-          <MenuItem>
+          <Link className='link' to='/register'>Register</Link>
+          <Link to='/login' className='link'>Sign In</Link>
+          <Link className='link' to='/cart'>
             <Badge badgeContent={1} color='primary'>
               <ShoppingCartOutlinedIcon color='action' />
             </Badge>
-          </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </ContainerNav>

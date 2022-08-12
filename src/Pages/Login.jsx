@@ -4,10 +4,10 @@ import {
   Title,
   FormLogin,
   Button,
-  Link,
+  Linka,
   InputLogin
 } from './Register.styled'
-
+import { Link } from 'react-router-dom'
 const Login = () => {
   return (
     <Container>
@@ -17,8 +17,8 @@ const Login = () => {
           <InputLogin placeholder='Username' />
           <InputLogin placeholder='Password' />
           <Button>LOGIN</Button>
-          <Link>DO NOT YOU REMEBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          <Linka>DO NOT YOU REMEBER THE PASSWORD?</Linka>
+          <Linka><Link to='/register' style={{textDecoration: 'none', color: 'dark'}}>CREATE A NEW ACCOUNT</Link></Linka>
         </FormLogin>
       </WrapperLogin>
     </Container>

@@ -40,6 +40,9 @@ const InputContainer = styled.div`
   @media ${devices.mobileS} {
     width: 80%;
   }
+  @media ${devices.laptop} {
+    width: 50%;
+  }
 `
 const Input = styled.input`
   border: none;

@@ -18,6 +18,9 @@ const Image = styled.img`
   @media ${devices.mobileS}{
     height: 30vh;
   }
+  @media ${devices.laptop}{
+   height: 100%;
+  }
 `
 const Info = styled.div`
   position: absolute;
@@ -37,6 +40,9 @@ const Title = styled.h1`
   letter-spacing: 1px;
   color: #fefefe;
   margin-bottom: 1.25rem;
+  @media ${devices.mobileS}{
+    font-size: 2rem;
+  }
 `
 const Button = styled.button`
   font-family: ${Variables.Fontfamily};
@@ -65,6 +71,10 @@ const ContainerCategories = styled.div`
     padding: 0px;
     flex-direction: column;
   }
+  @media ${devices.laptop}{
+    flex-direction: row;
+  }
+ 
 `
 
 export { ContainerItem, ContainerCategories, Image, Info, Title, Button }
