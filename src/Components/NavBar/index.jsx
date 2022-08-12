@@ -1,31 +1,44 @@
 import React from 'react'
-import { ContainerNav, Wrapper, Left, Right, Center, Language, SearchContainer, Input, MenuItem, Logo } from './Navbar.styled'
+import {
+  ContainerNav,
+  Wrapper,
+  Left,
+  Right,
+  Center,
+  SearchContainer,
+  Input,
+  MenuItem,
+  Logo,
+} from './Navbar.styled'
 
 import { Search } from '@mui/icons-material'
 import { Badge } from '@mui/material'
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
+import StorefrontIcon from '@mui/icons-material/Storefront'
 
 const Navbar = () => {
   return (
     <ContainerNav>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder='Search'/>
-            <Search style={{color: 'gray', fontSize: 16}}/>
+            <Input placeholder='Search' />
+            <Search
+              style={{ color: 'gray', fontSize: 20, cursor: 'pointer' }}
+            />
           </SearchContainer>
         </Left>
         <Center>
-         <Logo>Market Budget</Logo>
+          <Logo>
+            Market Budget
+          </Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem href='/'>Register</MenuItem>
+          <MenuItem href='/'>Sign In</MenuItem>
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlinedIcon color="action" />
+            <Badge badgeContent={1} color='primary'>
+              <ShoppingCartOutlinedIcon color='action' />
             </Badge>
           </MenuItem>
         </Right>

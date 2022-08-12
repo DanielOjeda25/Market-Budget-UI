@@ -1,35 +1,46 @@
 import styled from 'styled-components'
 import { Variables } from '../../Global.styled'
-import { mobile } from '../../responsive-media'
+import {devices} from '../../responsive-media'
 const Container = styled.div`
   display: flex;
-  ${mobile({ flexDirection: 'column' })}
+  background-color: #bdc1c6;
+  color: ${Variables.lightColor};
+  @media ${devices.mobileS}{
+    flex-direction: column;
+  }
 `
 const Left = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
 `
 const Right = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ backgroundColor: '#eee' })}
 `
 const Center = styled.div`
   flex: 1;
-  padding: 20px;
-  ${mobile({ display: 'none' })}
+  padding: 1.25rem;
+  @media ${devices.mobileS}{
+    display: none;
+  }
 `
 
 const Logo = styled.img`
-  height: 5rem;
-  width: 5rem;
-  margin-left: 10px;
+  height: 96px;
+  width: 96px;
+  margin-left: .625rem;
 `
 const Title = styled.h3`
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
   font-family: ${Variables.Fontfamily};
+
+  &:first-letter {
+    color: ${Variables.greenColor};
+  }
 `
 const List = styled.ul`
   margin: 0;
@@ -37,32 +48,48 @@ const List = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  font-size: 1.2rem;  
 `
 const ListItem = styled.li`
   font-family: ${Variables.Fontfamily};
   width: 50%;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
+
+  &:first-letter {
+    color: ${Variables.greenColor};
+  }
+  &:hover {
+    color: ${Variables.lightRedColor};
+    cursor: pointer;
+  }
 `
 const Description = styled.div`
-  margin: 20px 0px;
+  margin: 1.25rem 0rem;
+  font-size: 1.2rem;
   font-family: ${Variables.Fontfamily};
 `
 const SocialContainer = styled.div`
   display: flex;
 `
 const SocialIcon = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   color: white;
   background-color: #${(props) => props.color};
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 20px;
+  margin-right: 1.25rem;
+  transition: all .5s ease;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 `
 const ContactItem = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   font-family: ${Variables.Fontfamily};

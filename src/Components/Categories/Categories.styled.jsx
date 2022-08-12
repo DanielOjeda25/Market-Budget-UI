@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Variables } from '../../Global.styled'
-import { mobile } from '../../responsive-media'
+import { devices } from '../../responsive-media'
 
 /**
  * !Este container es para el CategoryItem.jsx
@@ -15,7 +15,9 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  ${mobile({ height: '20vh' })}
+  @media ${devices.mobileS}{
+    height: 30vh;
+  }
 `
 const Info = styled.div`
   position: absolute;
@@ -33,7 +35,7 @@ const Title = styled.h1`
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 1px;
-  color: ${Variables.lightColor};
+  color: #fefefe;
   margin-bottom: 1.25rem;
 `
 const Button = styled.button`
@@ -44,7 +46,12 @@ const Button = styled.button`
   color: gray;
   cursor: pointer;
   font-weight: 600;
-
+  border-radius: 0.25rem;
+  transition: all 0.7s ease;
+  &:hover{
+    color: ${Variables.lightColor};	
+    background-color: ${Variables.darkColor};
+  }
 `
 
 /**
@@ -54,7 +61,10 @@ const ContainerCategories = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  ${mobile({padding: '0px', flexDirection: 'column'})}
+  @media ${devices.mobileM}{
+    padding: 0px;
+    flex-direction: column;
+  }
 `
 
 export { ContainerItem, ContainerCategories, Image, Info, Title, Button }
